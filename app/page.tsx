@@ -18,29 +18,34 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Fetch events from API when the component mounts
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await fetch("/api/allevent");
-        if (!response.ok) {
-          throw new Error("Failed to fetch events");
-        }
-        const data = await response.json();
-        setEvents(data);
-      } catch (err) {
-        if (err instanceof Error) {
-          setError(err.message || "An error occurred");
-        } else {
-          setError("An error occurred");
-        }
-      } finally {
-        setLoading(false);
+  // Fetch events from API
+  const fetchEvents = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch("/api/allevent");
+      if (!response.ok) {
+        throw new Error("Failed to fetch events");
       }
-    };
+      const data = await response.json();
+      setEvents(data);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message || "An error occurred");
+      } else {
+        setError("An error occurred");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  // Fetch events when the component mounts
+  useEffect(() => {
     fetchEvents();
   }, []);
+
+  // Fetch events on every render
+  fetchEvents();
 
   return (
     <div>
