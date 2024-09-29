@@ -31,12 +31,12 @@ const CreateEvent = () => {
 
   const handleCreateEvent = async () => {
     const token = Cookies.get("token");
-
+  
     if (!token) {
       setError("You must be logged in to create an event.");
       return;
     }
-
+  
     // Prepare event data
     const eventData = {
       eventTitle,
@@ -49,7 +49,7 @@ const CreateEvent = () => {
       isFree,
       eventType,
     };
-
+  
     try {
       const response = await fetch("/api/createevent", {
         method: "POST",
@@ -59,16 +59,16 @@ const CreateEvent = () => {
         },
         body: JSON.stringify(eventData),
       });
-
+  
       const result = await response.json();
-
+  
       if (!response.ok) {
         setError(result.error || "Failed to create event.");
         return;
       }
-
+  
       setSuccessMessage("Event created successfully!");
-
+  
       // Redirect to the events list page after creation
       router.push("/dashboard/events");
     } catch (err) {
