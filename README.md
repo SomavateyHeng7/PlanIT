@@ -57,13 +57,20 @@ User can edit their profile name
 
 On the event 
 
-When ythe user click on the event they will see the event they have created and there is also a button that user can click on to create event
+When the user click on the event they will see the event they have created and there is also a button that user can click on to create event
 <img width="1470" alt="Screenshot 2567-09-29 at 18 23 23" src="https://github.com/user-attachments/assets/e1870bb7-e076-4e7c-8388-9e1c3d65fa73">
 
 Once User click on the create event page they will see the form to create event once the user fill in all the require and click on the button create event the user will see their event pop up on the event page
 here is how the form look like
 
 <img width="1470" alt="Screenshot 2567-09-29 at 18 24 35" src="https://github.com/user-attachments/assets/16edad2b-1ae3-4608-9813-17688d9ef105">
+
+User can also edit the event 
+<img width="1470" alt="Screenshot 2567-09-29 at 18 34 37" src="https://github.com/user-attachments/assets/3afbee82-faa1-4a92-9161-00fe5ace4f6e">
+
+User can also delete the event
+<img width="1470" alt="Screenshot 2567-09-29 at 18 34 47" src="https://github.com/user-attachments/assets/b24cb6b6-b8e8-4bbe-8d4d-988a865fa815">
+
 
 Once the user click on the event in the home page they will see the event detail and the button to purchase tickets
 
