@@ -3,8 +3,6 @@ import Event from '@/models/event'; // Import the Event model
 import jwt from 'jsonwebtoken'; // For verifying the user's token
 import { NextResponse } from 'next/server';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret'; // Set JWT secret
-
 // Middleware to verify the user's token
 async function verifyToken(req) {
   const authHeader = req.headers.get('authorization');
@@ -14,7 +12,7 @@ async function verifyToken(req) {
 
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, JWT_SECRET); // Verify token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET); // Use process.env.JWT_SECRET
     return decoded;
   } catch (error) {
     console.error('JWT verification failed:', error);
