@@ -1,22 +1,27 @@
 Project Name: PlanIT
+
 Member: Somavatey Heng
+
 Project Description: PlanIT is a web-based Event Management System designed to streamline the process of organizing, managing, and attending events. The platform allows organizers to create and manage events, while attendees can register for and participate in these events. The system provides a backend to handle CRUD operations for three main entities: Events, Organizers, and Attendees. It also offers a user-friendly frontend for interacting with these entities.
 
 In our website user can browse and check what are the events that we currently have on going without needing to login or signup. However in order for them to purchase ticket, write reviews, create events and other functions they have to create an account then login.
 
 Our website has the following features:
+
 Homepage 
+
 This page display all the events that we have. 
 <img width="1470" alt="Screenshot 2567-09-29 at 17 20 50" src="https://github.com/user-attachments/assets/53ce4610-4ac7-4ea4-bce6-e9c720e7f1de">
 
 About US
+
 A brief description of what our website is about.
 <img width="1470" alt="Screenshot 2567-09-29 at 17 20 57" src="https://github.com/user-attachments/assets/680a2bc8-2450-4c12-ba54-c79502f31f25">
 
 Contact US
+
 This is only for the UI
 <img width="1470" alt="Screenshot 2567-09-29 at 17 21 03" src="https://github.com/user-attachments/assets/40f792b2-c618-4e2f-a65e-dfd20fc58733">
-
 
 SignUp
 Here is our signup page
@@ -41,9 +46,18 @@ here is the profile page
 <img width="1470" alt="Screenshot 2567-09-29 at 18 20 00" src="https://github.com/user-attachments/assets/40a99695-0000-4822-a6df-5fa6458ef7ea">
 
 User can edit their profile name 
+
 <img width="1470" alt="Screenshot 2567-09-29 at 18 20 06" src="https://github.com/user-attachments/assets/b435bcda-e4d2-4495-9f92-c77483dd1201">
 
+On the event 
 
+When ythe user click on the event they will see the event they have created and there is also a button that user can click on to create event
+<img width="1470" alt="Screenshot 2567-09-29 at 18 23 23" src="https://github.com/user-attachments/assets/e1870bb7-e076-4e7c-8388-9e1c3d65fa73">
+
+Once User click on the create event page they will see the form to create event once the user fill in all the require and click on the button create event the user will see their event pop up on the event page
+here is how the form look like
+
+<img width="1470" alt="Screenshot 2567-09-29 at 18 24 35" src="https://github.com/user-attachments/assets/16edad2b-1ae3-4608-9813-17688d9ef105">
 
 
 
