@@ -2,6 +2,12 @@ Project Name: PlanIT
 
 Member: Somavatey Heng
 
+Leanghour Ly 
+https://github.com/llh1230507/web_project
+
+Sokty Heng
+https://github.com/SoktyHeng/web_project
+
 Project Description: PlanIT is a web-based Event Management System designed to streamline the process of organizing, managing, and attending events. The platform allows organizers to create and manage events, while attendees can register for and participate in these events. The system provides a backend to handle CRUD operations for three main entities: Events, Organizers, and Attendees. It also offers a user-friendly frontend for interacting with these entities.
 
 In our website user can browse and check what are the events that we currently have on going without needing to login or signup. However in order for them to purchase ticket, write reviews, edit reviews, delete reviews, create events, edit events, delete event they have to create an account then login.
