@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from 'next/navigation'; 
+import Link from 'next/link'; // Import Link from next/link
 import Cookies from 'js-cookie'; // Import js-cookie for client-side cookie handling
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -109,6 +110,13 @@ const SignIn = () => {
               Sign In
             </Button>
           </form>
+
+          {/* Register Link */}
+          <div className="text-center pt-4">
+            <Link href="/auth/signup" className="text-[#2b5e9f] hover:underline">
+              Don't have an account? Register
+            </Link>
+          </div>
         </div>
       </div>
     </div>

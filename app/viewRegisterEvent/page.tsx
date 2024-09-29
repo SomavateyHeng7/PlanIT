@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "@/components/shared/NavBar";
 import { Button } from "@/components/ui/button";
+import Sidebar from "@/components/Sidebar";
 
 // Component for displaying individual event details from tickets
 const TicketEventDetails = ({ event }: { event: any }) => {
@@ -53,7 +54,7 @@ const MyTickets = () => {
 
   return (
     <div>
-      <Navbar />
+      <Sidebar />
       <div className="max-w-4xl mx-auto p-8 mt-16 bg-white shadow-lg rounded-lg">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">My Event Tickets</h1>
 

@@ -13,7 +13,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+import Cookies from "js-cookie"; // Import js-cookie
 
 export const Sidebar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -33,7 +33,12 @@ export const Sidebar: React.FC = () => {
 
   // Mapping menu items to routes
   const handleNavigation = (route: string) => {
-    router.push(route);
+    if (route === "/auth/logout") {
+      Cookies.remove("token"); // Remove the token
+      router.push("/"); // Route to home page
+    } else {
+      router.push(route);
+    }
     setDrawerOpen(false); // Close the drawer after navigating
   };
 
@@ -50,11 +55,11 @@ export const Sidebar: React.FC = () => {
       <Divider />
       <List className="cursor-pointer">
         {[
-          { text: "Home", route: "/dashboard/" },
+          { text: "Home", route: "/dashboard" },
           { text: "Events", route: "/dashboard/events" },
           { text: "View My Ticket", route: "/viewRegisterEvent" },
           { text: "Profile", route: "/profile" },
-          { text: "Logout", route: "/auth/logout" },
+          { text: "Go Back to MainPage", route: "/" },
         ].map((item) => (
           <ListItem
             key={item.text}

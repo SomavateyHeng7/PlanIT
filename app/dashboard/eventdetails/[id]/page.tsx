@@ -74,7 +74,7 @@ const EventDetail = () => {
   }, [eventId]);
 
   const handleEdit = () => {
-    router.push(`/dashboard/events/editeevent/${eventId}`);
+    router.push(`/dashboard/events/editevent/${eventId}`);
   };
 
   const handleDelete = async () => {

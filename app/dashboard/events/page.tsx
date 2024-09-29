@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/shared/Footer";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Sidebar from "@/components/Sidebar";
@@ -45,13 +44,9 @@ export default function EventList() {
         }
 
         const data = await response.json();
-        setEvents(data.events);  // Set the fetched events into state
+        setEvents(data.events || []);  // Ensure it sets an empty array if no events are found
       } catch (err) {
-        if (err instanceof Error) {
-          setError(err.message || "An error occurred while fetching events.");
-        } else {
-          setError("An error occurred while fetching events.");
-        }
+        setError(err instanceof Error ? err.message : "An error occurred while fetching events.");
       } finally {
         setLoading(false);
       }
@@ -60,8 +55,9 @@ export default function EventList() {
     fetchEvents();
   }, []);
 
-  if (loading) return <div>Loading events...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) {
+    return <div>Loading events...</div>;
+  }
 
   return (
     <div>
@@ -76,9 +72,15 @@ export default function EventList() {
             </button>
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          {events.length > 0 ? (
-            events.map((event) => (
+
+        {/* Error or No Events UI */}
+        {error ? (
+          <div className="text-gray-500 text-lg justify-center flex">No event found</div>
+        ) : events.length === 0 ? (
+          <div className="text-gray-500 text-lg">No events found. Click the button above to create one.</div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {events.map((event) => (
               <Link
                 key={event._id}
                 href={`/dashboard/eventdetails/${event._id}`}
@@ -101,13 +103,11 @@ export default function EventList() {
                   Capacity: {event.capacity}
                 </p>
               </Link>
-            ))
-          ) : (
-            <p className="text-gray-500">No events found.</p>
-          )}
-        </div>
+            ))}
+          </div>
+        )}
       </main>
-      <Footer />
+
     </div>
   );
 }

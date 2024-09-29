@@ -19,10 +19,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  profilePicture: {
-    type: String,  // Path to the profile picture
-    default: null, // Profile picture is optional
-  },
   createdAt: {
     type: Date,
     default: Date.now,

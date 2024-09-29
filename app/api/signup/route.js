@@ -3,10 +3,8 @@ import User from '@/models/user';
 import jwt from 'jsonwebtoken';
 import { NextResponse } from 'next/server';
 
-// Set JWT Secret
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret';
 
-// Function to handle the POST request
 export async function POST(req) {
   await connectDB();
 
@@ -35,13 +33,7 @@ export async function POST(req) {
     // Generate JWT token
     const token = jwt.sign({ id: newUser._id, email: newUser.email }, JWT_SECRET, { expiresIn: '7d' });
 
-    // Set the token in the HTTP-only cookie
-    const response = NextResponse.json({ message: 'User created successfully' });
-    response.headers.set(
-      'Set-Cookie',
-      `token=${token}; HttpOnly; Path=/; Max-Age=604800; SameSite=Strict;`
-    );
-    return response;
+    return NextResponse.json({ message: 'User created successfully' }, { status: 201 });
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: 'Failed to register user' }, { status: 500 });

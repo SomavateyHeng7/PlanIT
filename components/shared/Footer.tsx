@@ -1,7 +1,11 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { Button } from '@/components/ui/button'; // Assuming Button is from shadcn
+interface FooterProps {
 
-export default function Footer() {
+  className?: string;
+
+}
+const Footer: React.FC<FooterProps> = ({ }) => {
   return (
     <footer className="bg-gray-900 text-white border-t">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 py-8">
@@ -85,4 +89,6 @@ export default function Footer() {
       </div>
     </footer>
   );
+  
 }
+export default Footer;

@@ -20,7 +20,7 @@ const ProfilePage: React.FC = () => {
     const token = Cookies.get('token'); // Get the token from cookies
 
     if (!token) {
-      router.push('/signin'); // Redirect to login page if no token found
+      router.push('/auth/signin'); // Redirect to login page if no token found
       return;
     }
 
