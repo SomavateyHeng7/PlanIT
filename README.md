@@ -82,6 +82,24 @@ Once the user click on the purchase ticket they will see this form and can fill 
 Once they purchase they ticket they can go check their purchase ticket in the view my ticket in the dashboard
 <img width="1470" alt="Screenshot 2567-09-29 at 18 26 46" src="https://github.com/user-attachments/assets/11e641f5-a7d3-47be-96bb-d0493552e770">
 
+User can create review 
+<img width="1470" alt="Screenshot 2567-09-29 at 18 38 19" src="https://github.com/user-attachments/assets/119334e9-302f-4c7f-a01f-9b7411c0c14b">
+
+<img width="1470" alt="Screenshot 2567-09-29 at 18 38 26" src="https://github.com/user-attachments/assets/39a9672e-f18b-4ffc-aee5-e280bc208a55">
+
+User can edit review 
+<img width="1470" alt="Screenshot 2567-09-29 at 18 39 58" src="https://github.com/user-attachments/assets/42ed5164-2098-48af-89bf-b97a2763355d">
+
+<img width="1470" alt="Screenshot 2567-09-29 at 18 40 05" src="https://github.com/user-attachments/assets/a1ffdc20-83d5-47bf-a7d8-646deb974c3e">
+
+User can also delete review
+<img width="1470" alt="Screenshot 2567-09-29 at 18 41 06" src="https://github.com/user-attachments/assets/42469264-1ac1-4cf1-91ee-69e197c3aa71">
+
+<img width="1470" alt="Screenshot 2567-09-29 at 18 40 59" src="https://github.com/user-attachments/assets/2e2699e9-864b-4ce2-8811-95cce2d4f8cd">
+
+
+
+
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
