@@ -93,9 +93,9 @@ User can edit review
 <img width="1470" alt="Screenshot 2567-09-29 at 18 40 05" src="https://github.com/user-attachments/assets/a1ffdc20-83d5-47bf-a7d8-646deb974c3e">
 
 User can also delete review
-<img width="1470" alt="Screenshot 2567-09-29 at 18 41 06" src="https://github.com/user-attachments/assets/42469264-1ac1-4cf1-91ee-69e197c3aa71">
-
 <img width="1470" alt="Screenshot 2567-09-29 at 18 40 59" src="https://github.com/user-attachments/assets/2e2699e9-864b-4ce2-8811-95cce2d4f8cd">
+
+<img width="1470" alt="Screenshot 2567-09-29 at 18 41 06" src="https://github.com/user-attachments/assets/42469264-1ac1-4cf1-91ee-69e197c3aa71">
 
 
 
