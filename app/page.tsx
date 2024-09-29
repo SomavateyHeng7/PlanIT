@@ -17,10 +17,10 @@ export default function HomePage() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const REFRESH_INTERVAL = 30000; // 30 seconds
 
-  // Fetch events from API
+  // Function to fetch events from the API
   const fetchEvents = async () => {
-    setLoading(true);
     try {
       const response = await fetch("/api/allevent");
       if (!response.ok) {
@@ -39,13 +39,17 @@ export default function HomePage() {
     }
   };
 
-  // Fetch events when the component mounts
+  // Fetch events when the component mounts and set up auto-refetch
   useEffect(() => {
     fetchEvents();
-  }, []);
 
-  // Fetch events on every render
-  fetchEvents();
+    const intervalId = setInterval(() => {
+      fetchEvents();
+    }, REFRESH_INTERVAL);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div>
