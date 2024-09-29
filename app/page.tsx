@@ -17,38 +17,29 @@ export default function HomePage() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const REFRESH_INTERVAL = 30000; // 30 seconds
 
-  // Function to fetch events from the API
-  const fetchEvents = async () => {
-    try {
-      const response = await fetch("/api/allevent");
-      if (!response.ok) {
-        throw new Error("Failed to fetch events");
-      }
-      const data = await response.json();
-      setEvents(data);
-    } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message || "An error occurred");
-      } else {
-        setError("An error occurred");
-      }
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Fetch events when the component mounts and set up auto-refetch
+  // Fetch events from API when the component mounts
   useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch("/api/allevent");
+        if (!response.ok) {
+          throw new Error("Failed to fetch events");
+        }
+        const data = await response.json();
+        setEvents(data);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message || "An error occurred");
+        } else {
+          setError("An error occurred");
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchEvents();
-
-    const intervalId = setInterval(() => {
-      fetchEvents();
-    }, REFRESH_INTERVAL);
-
-    // Clean up the interval when the component unmounts
-    return () => clearInterval(intervalId);
   }, []);
 
   return (
