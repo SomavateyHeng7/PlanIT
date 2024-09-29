@@ -61,6 +61,15 @@ here is how the form look like
 
 
 
+<img width="1470" alt="Screenshot 2567-09-29 at 18 27 08" src="https://github.com/user-attachments/assets/9f4fe693-2867-4e3b-a977-715421fe5702">
+
+<img width="1470" alt="Screenshot 2567-09-29 at 18 27 01" src="https://github.com/user-attachments/assets/6356ec87-446a-4231-a4c2-ed99ba9f232e">
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
