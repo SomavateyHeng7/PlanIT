@@ -1,16 +1,22 @@
-// app/api/events/route.js
 import connectDB from '@/lib/db';
 import Event from '@/models/event';
-import { NextResponse } from 'next/server';
 
-export async function GET() {
-  await connectDB();
+export async function GET(req) {
+  await connectDB();  // Ensure database connection
 
   try {
+    // Fetch all events
     const events = await Event.find({});
-    return NextResponse.json(events, { status: 200 });
+
+    // Set no-store Cache-Control to prevent caching of API response
+    const headers = new Headers();
+    headers.set('Cache-Control', 'no-store, max-age=0, must-revalidate');
+
+    return new Response(JSON.stringify(events), {
+      status: 200,
+      headers
+    });
   } catch (error) {
-    console.error("Error fetching events:", error);
-    return NextResponse.json({ error: 'Failed to fetch events' }, { status: 500 });
+    return new Response(JSON.stringify({ error: 'Failed to fetch events' }), { status: 500 });
   }
 }

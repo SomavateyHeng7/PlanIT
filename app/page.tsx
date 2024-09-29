@@ -22,25 +22,27 @@ export default function HomePage() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch("/api/allevent");
+        const response = await fetch("/api/allevent", {
+          method: "GET",
+          headers: {
+            'Cache-Control': 'no-store',  // Add Cache-Control to disable caching
+          },
+        });
         if (!response.ok) {
           throw new Error("Failed to fetch events");
         }
         const data = await response.json();
         setEvents(data);
       } catch (err) {
-        if (err instanceof Error) {
-          setError(err.message || "An error occurred");
-        } else {
-          setError("An error occurred");
-        }
+        setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
         setLoading(false);
       }
     };
-
+  
     fetchEvents();
-  }, []);
+  }, []);  // Fetch only once on component mount
+  
 
   return (
     <div>
