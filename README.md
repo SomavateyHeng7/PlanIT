@@ -28,6 +28,21 @@ Dashboard
 This page display the number of events, the number of attendees, revenues and there is also graph for visualization but this is only for the UI it doesn't fetch any data.
 <img width="1470" alt="Screenshot 2567-09-29 at 18 12 08" src="https://github.com/user-attachments/assets/46a0c93e-69a0-420d-a51f-1bfba6b4710c">
 
+After login to the account this is what the user will see 
+
+<img width="1470" alt="Screenshot 2567-09-29 at 18 13 41" src="https://github.com/user-attachments/assets/b5ba4309-9c6a-4f94-8589-39a163120a5c">
+
+on the navbar there is a dashboard and logout.
+
+This is the sidebar of the dashboard
+<img width="1470" alt="Screenshot 2567-09-29 at 18 19 15" src="https://github.com/user-attachments/assets/71125c29-7132-4b88-86e8-a5452ee2e8a0">
+
+here is the profile page
+<img width="1470" alt="Screenshot 2567-09-29 at 18 20 00" src="https://github.com/user-attachments/assets/40a99695-0000-4822-a6df-5fa6458ef7ea">
+
+User can edit their profile name 
+<img width="1470" alt="Screenshot 2567-09-29 at 18 20 06" src="https://github.com/user-attachments/assets/b435bcda-e4d2-4495-9f92-c77483dd1201">
+
 
 
 
