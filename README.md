@@ -24,10 +24,16 @@ This is only for the UI
 <img width="1470" alt="Screenshot 2567-09-29 at 17 21 03" src="https://github.com/user-attachments/assets/40f792b2-c618-4e2f-a65e-dfd20fc58733">
 
 SignUp
+
 Here is our signup page
+<img width="1470" alt="Screenshot 2567-09-29 at 18 32 09" src="https://github.com/user-attachments/assets/817f5ebb-f694-43bd-87e6-ce15eb31034b">
+
 
 Login 
+
 Here is our login page
+<img width="1470" alt="Screenshot 2567-09-29 at 18 32 00" src="https://github.com/user-attachments/assets/47ee946d-5222-4a1d-94d0-804b4b153c67">
+
 
 Dashboard
 This page display the number of events, the number of attendees, revenues and there is also graph for visualization but this is only for the UI it doesn't fetch any data.
